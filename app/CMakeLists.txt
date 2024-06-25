@@ -27,7 +27,8 @@ find_library( # Defines the name of the path variable that stores the
 
               # Specifies the name of the NDK library that
               # CMake needs to locate.
-              log )
+              log
+              cstring)
 
 # Links your native library against one or more other native libraries.
 target_link_libraries( # Specifies the target library.

@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private native void sendMessage(String message);
 
     // Native callbacks:
-    private void onNativeReceivedMessage(byte c_message[]) {
+    private void onNativeReceivedMessage(byte[] c_message) {
         String message = new String(c_message);
         Log.v("ggwave", "Received message: " + message);
 
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     })
                     .setNegativeButton(android.R.string.no, null)
-                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setIcon(R.drawable.ic_launcher_foreground)
                     .show();
         } else {
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{
